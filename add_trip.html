@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <title>Mileage Calculator</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <a href="#" class="navbar-brand">Mileage Calculator</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="navbar-item">
+                    <a href="index.html" class="nav-link">Register Vehicle</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="add_trip.html" class="nav-link active">Add Trip</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="analysis.html" class="nav-link">Analysis</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container col-8">
+        <form autocomplete="off" id="tripForm">
+            <h3>Trip Details</h3>
+            <div class="form-group row ">
+                <label class="col-sm-3 col-form-label" for="vehicleName"><strong>Select your
+                        vehicle</strong></label>
+                <div class="col-md-9 ">
+                    <select name="number" id="vehicleName" class="form-control" required>
+                        <option disabled selected>--Please Select an Option</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="currentKMs"><strong>KM's</strong></label>
+                <div class="col-md-9">
+                    <input type="number" placeholder="KM's" name="kms" id="currentKMs" class="form-control" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <p><span class="col-form-label"><b>Previous KMs Reading:  </b></span><span id="prevKMs"></span></p>
+                <p><span class="col-form-label"><b>Total Kms in trip:  </b></span><span id="TotalKMs"></span></p>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="totalFuelPrice"><strong>Total Fuel Price</strong></label>
+                <div class="col-md-9">
+                    <input type="number" placeholder="Total Fuel Price" id="totalFuelPrice" name="totalFuelPrice" class="form-control" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="pricePerLtr"><strong>Price/Ltr</strong></label>
+                <div class="col-md-9">
+                    <input type="number" placeholder="Price/Ltr" id="pricePerLtr" name="pricePerLtr" class="form-control" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <p><span class="col-form-label"><b>Total Fuel Filled: </b></span><span id="totalFuelFilled"></span></p>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="fillDate"><strong>Date</strong></label>
+                <div class="col-md-9">
+                    <input type="date" name="date" class="form-control" required>
+                </div>
+            </div>
+            <hr>
+            <button type="submit" id="submitBtn" class="btn btn-success offset-sm-9 col-sm-3">Add Trip</button>
+        </form>
+        <br>
+        <table id="tripsTable" class="table table-striped table-bordered table-hover table-sm">
+            <thead class="thead-light">
+                <tr>
+                    <th>S.No.</th>
+                    <th>Trip Date</th>
+                    <th>Km's Reading</th>
+                    <th>Km's in Trip</th>
+                    <th>Average</th>
+                    <th>Rs/Km</th>
+                </tr>
+            </thead>
+            <tbody id="tripsBody"></tbody>
+        </table>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        <script src="./add_trip.js"></script>
+</body>
+
+</html>

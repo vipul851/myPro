@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <title>Mileage Calculator</title>
+</head>
+
+<body background="wk.jpg">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <a href="#" class="navbar-brand"><dt>Mileage Calculator</dt></a>
+        <button type="button" class="navbar-toggler bg-dark" data-toggle="collapse" data-target="#myNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="myNavbar" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active"><dt>Register Vehicle</dt></a>
+                </li>
+                <li class="nav-item">
+                    <a href="add_trip.html" class="nav-link"><dt>Add Trip</dt></a>
+                </li>
+                <li class="nav-item">
+                    <a href="analysis.html" class="nav-link"><dt>Analysis</dt></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container col-8 mt-5">
+        <form autocomplete="off" id="vehicleRegister"> 
+            <h3>Register Vehicle</h3>
+            <div class="form-group row">
+                    <label class="col-sm-3 col-form-label" for="type"><strong>Type</strong></label>
+                    <label class="radio-inline col-sm-3 ">
+                    <input type="radio" name="type" value="Scooty">Scooty</label>
+                    <label class="radio-inline col-sm-3">
+                    <input type="radio" name="type" value="Bike">Bike</label>
+                    <label class="radio-inline col-sm-3">
+                    <input type="radio" name="type" value="Car">Car</label>       
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="vehicleName"><strong>Vehicle Name</strong></label>
+                <div class="col-md-9">
+                    <input type="text" placeholder="Vehicle Name" name="name" class="form-control" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="vehicleNumber"><strong>Vehicle Number</strong></label>
+                <div class="col-md-9">
+                    <input type="text" placeholder="Vehicle Number" name="number" class="form-control" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="kmsTravelled"><strong>Kms Travelled</strong></label>
+                <div class="col-md-9">
+                    <input type="number" placeholder="Kms Travelled" name="kms" class="form-control" required>
+                </div>
+            </div>
+            <hr>
+            <input type="submit" value="Register" class="btn btn-success offset-sm-9 col-sm-3">
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

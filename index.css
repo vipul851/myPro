@@ -1,0 +1,12 @@
+body{
+ font-family: sans-serif;
+ background: url(wk.jpg) no-repeat;
+ background-size: cover;
+ padding: 0%;
+ margin: 0%;
+
+}
+#vehicleRegister{
+transform: translate(-50%,-50%);
+color: white
+}
